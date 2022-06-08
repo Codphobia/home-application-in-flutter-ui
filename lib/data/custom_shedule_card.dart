@@ -11,162 +11,139 @@ class CustomSheduleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 352.w,
-      height: 168.h,
-      decoration: BoxDecoration(
+    return Card(
+      elevation: 8,
+      shadowColor: Colors.grey.shade300,
+      child: Container(
+        width: 360.w,
+        height: 170.h,
+        decoration: BoxDecoration(
           color: kcontainerColor,
           borderRadius: BorderRadius.circular(15.r),
-          border: Border.all(
-            color: kSaveButtonColor,
-            width: 1,
-          )),
-      child: Column(children: [
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 10,
-            bottom: 8,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(
-                icon,
-                width: 23.w,
-                height: 30.h,
-              ),
-              SizedBox(
-                width: 10.w,
-              ),
-              Text(title,
-                  style: TextStyle(
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.w500,
-                      color: kcardTextColor))
-            ],
-          ),
         ),
-        SizedBox(
-          height: 4.w,
-        ),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          IntrinsicHeight(
-            child: Row(
-              children: [
-                Text('Interval Time',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w400,
-                        color: kcardTextColor)),
-                SizedBox(
-                  width: 5.w,
-                ),
-                const VerticalDivider(
-                  color: kSaveButtonColor,
-                  thickness: 1,
-                ),
-                Text('Running Time',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w400,
-                        color: kcardTextColor)),
-              ],
-            ),
+        child: Column(children: [
+          SizedBox(
+            height: 5.h,
           ),
-        ]),
-        SizedBox(
-          height: 5.h,
-        ),
-        Expanded(
-          child: Row(children: [
-            Expanded(
-              child: Row(children: [
-                SizedBox(
-                  width: 16.w,
-                ),
-                const Dropdown(),
-                SizedBox(
-                  width: 1.w,
-                ),
-                Text('Hour',
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w400,
-                        color: kcardTextColor)),
-                SizedBox(
-                  width: 7.w,
-                ),
-                const DropdownTwo(),
-                SizedBox(
-                  width: 1.w,
-                ),
-                Text('Min',
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w400,
-                        color: kcardTextColor)),
-              ]),
-            ),
-            const VerticalDivider(
-              color: kSaveButtonColor,
-              thickness: 1,
-            ),
-            Expanded(
+          Expanded(
+            child: SizedBox(
+              width: 109.w,
+              height: 30.h,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 3.w,
+                  SvgPicture.asset(
+                    icon,
+                    width: 23.w,
+                    height: 30.h,
                   ),
-                  const Dropdown(),
                   SizedBox(
-                    width: 1.w,
+                    width: 10.w,
                   ),
-                  Text('Hour',
+                  Text(title,
                       style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400,
-                          color: kcardTextColor)),
-                  SizedBox(
-                    width: 7.w,
-                  ),
-                  const DropdownTwo(),
-                  SizedBox(
-                    width: 1.w,
-                  ),
-                  Text('Min',
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400,
-                          color: kcardTextColor)),
+                          fontSize: 24.sp,
+                          fontWeight: FontWeight.w500,
+                          color: kcardTextColor))
                 ],
               ),
             ),
-          ]),
-        ),
-        SizedBox(
-          height: 7.h,
-        ),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: kResetButtonColor, // Background color
-              ),
-              onPressed: () {},
-              child: const Text('Reset')),
-          SizedBox(
-            width: 62.w,
           ),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: kSaveButtonColor, // Background color
+          Expanded(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IntrinsicHeight(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text('Interval Time',
+                            style: TextStyle(
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                                color: kcardTextColor)),
+                        SizedBox(
+                          width: 5.w,
+                        ),
+                        const VerticalDivider(
+                          color: kSaveButtonColor,
+                          thickness: 1,
+                        ),
+                        Text('Running Time',
+                            style: TextStyle(
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                                color: kcardTextColor)),
+                      ],
+                    ),
+                  ),
+                ]),
+          ),
+          Expanded(
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        const Dropdown(),
+                        Text('Hour',
+                            style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w400,
+                                color: kcardTextColor)),
+                        const DropdownTwo(),
+                        Text('Min',
+                            style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w400,
+                                color: kcardTextColor)),
+                        const VerticalDivider(
+                          color: kSaveButtonColor,
+                          thickness: 1,
+                        ),
+                        const Dropdown(),
+                        SizedBox(
+                          width: 1.w,
+                        ),
+                        Text('Hour',
+                            style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w400,
+                                color: kcardTextColor)),
+                        const DropdownTwo(),
+                        Text('Min',
+                            style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w400,
+                                color: kcardTextColor)),
+                      ]),
+                ]),
+          ),
+          SizedBox(
+            height: 7.h,
+          ),
+          Expanded(
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: kResetButtonColor, // Background color
+                  ),
+                  onPressed: () {},
+                  child: const Text('Reset')),
+              SizedBox(
+                width: 62.w,
               ),
-              onPressed: () {},
-              child: const Text('Save')),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: kSaveButtonColor, // Background color
+                  ),
+                  onPressed: () {},
+                  child: const Text('Save')),
+            ]),
+          ),
         ]),
-        SizedBox(
-          height: 7.h,
-        ),
-      ]),
+      ),
     );
   }
 }

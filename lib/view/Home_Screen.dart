@@ -26,10 +26,13 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(top: 54.h, left: 31.w, right: 207.w),
               child: Row(
                 children: [
-                  CircleAvatar(
-                    radius: 18,
-                    backgroundImage: NetworkImage(
-                        'https://avatars.githubusercontent.com/u/83277996?s=400&u=0828b742cb111f8be1236a227fabdc1def3abd35&v=4'),
+                  Container(
+                    width: 58.w,
+                    height: 58.h,
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          'https://avatars.githubusercontent.com/u/83277996?s=400&u=0828b742cb111f8be1236a227fabdc1def3abd35&v=4'),
+                    ),
                   ),
                   SizedBox(
                     width: 14.w,
@@ -45,12 +48,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 171.w),
-              child: SvgPicture.asset(
-                kVideoIcon,
-                width: 60.w,
-                height: 60.h,
+            Container(
+              width: 60.w,
+              height: 60.h,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 171.w),
+                child: SvgPicture.asset(
+                  kVideoIcon,
+                ),
               ),
             ),
             SizedBox(

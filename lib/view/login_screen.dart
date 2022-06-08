@@ -32,16 +32,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(
-                height: 30.h,
+                height: 37.h,
               ),
-              Container(
-                width: 327.36.w,
-                height: 230.h,
-                color: Colors.transparent,
-                child: Image.asset('assets/Logo.png'),
+              Center(
+                child: Image.asset(
+                  'assets/Logo.png',
+                  width: 206.36.w,
+                  height: 148.h,
+                ),
               ),
               SizedBox(
-                height: 30.h,
+                height: 37.h,
               ),
               Text(
                 'Welcome!',
@@ -64,26 +65,35 @@ class _LoginScreenState extends State<LoginScreen> {
                 onTap: () {
                   Get.to(() => DeviceStepScreen());
                 },
-                child: SvgPicture.asset(
-                  kgooglebuttonloginSvg,
-                  width: 356.w,
-                  height: 63.h,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 29.w),
+                  child: SvgPicture.asset(
+                    kgooglebuttonloginSvg,
+                    width: 356.w,
+                    height: 63.h,
+                  ),
                 ),
               ),
               InkWell(
                 onTap: () {
                   Get.to(() => DeviceStepScreen());
                 },
-                child: SvgPicture.asset(
-                  kgooglebuttonloginSvg,
-                  width: 356.w,
-                  height: 63.h,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 29.w),
+                  child: SvgPicture.asset(
+                    kgooglebuttonloginSvg,
+                    width: 356.w,
+                    height: 63.h,
+                  ),
                 ),
               ),
-              SvgPicture.asset(
-                klogoUnionDownSvg,
-                width: 317.24.w,
-                height: 230.39.h,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 28.w),
+                child: SvgPicture.asset(
+                  klogoUnionDownSvg,
+                  width: 317.24.w,
+                  height: 268.h,
+                ),
               ),
             ],
           ),

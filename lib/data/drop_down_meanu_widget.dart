@@ -27,8 +27,8 @@ class _DropdownState extends State<Dropdown> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 24.h,
-      width: 38.w,
+      height: 20.h,
+      width: 15.w,
       decoration: BoxDecoration(
         color: Colors.grey.shade300,
         borderRadius: BorderRadius.circular(5.r),
@@ -39,7 +39,7 @@ class _DropdownState extends State<Dropdown> {
           icon: const Icon(
             Icons.arrow_drop_down,
             color: Colors.black26,
-            size: 10,
+            size: 6,
           ),
           elevation: 16,
           style: const TextStyle(color: Colors.grey),
@@ -93,8 +93,8 @@ class _DropdownTwoState extends State<DropdownTwo> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 24.h,
-      width: 38.w,
+      height: 20.h,
+      width: 40.w,
       decoration: BoxDecoration(
         color: Colors.grey.shade300,
         borderRadius: BorderRadius.circular(5.r),

@@ -48,7 +48,7 @@ class _SCheduleAppliancesScreenState extends State<SCheduleAppliancesScreen> {
             ),
             CustomSheduleCard(title: 'Water Pump', icon: kWaterpPumpIcon),
             SizedBox(
-              height: 208.h,
+              height: 20.h,
             ),
             CustomSheduleCard(title: 'Intake', icon: kIntakeIcon),
             SizedBox(

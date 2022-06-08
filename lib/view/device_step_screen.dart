@@ -57,21 +57,21 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 48.w),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 48.w),
-                child: SvgPicture.asset(
-                  klogoUnionloginUpSvg,
-                  width: 317.24.w,
-                  height: 230.39.h,
-                ),
+              child: SvgPicture.asset(
+                klogoUnionloginUpSvg,
+                width: 317.24.w,
+                height: 230.39.h,
               ),
             ),
             SizedBox(
               height: 9.h,
             ),
-            Text(
-              'Device Setup',
-              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 36.sp),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 83.w),
+              child: Text(
+                'Device Setup',
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 36.sp),
+              ),
             ),
             SizedBox(
               height: 19.h,
@@ -81,11 +81,11 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
               style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16.sp),
             ),
             SizedBox(
-              height: 19.h,
+              height: 59.h,
             ),
             textFieldTitle('Device Name'),
             SizedBox(
-              height: 9.h,
+              height: 6.h,
             ),
             getTextField('e.g Device_01'),
             SizedBox(
@@ -93,7 +93,7 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
             ),
             textFieldTitle('Device ID'),
             SizedBox(
-              height: 9.h,
+              height: 6.h,
             ),
             getTextField('e.g 42401823'),
             SizedBox(
@@ -101,7 +101,7 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
             ),
             textFieldTitle('Password'),
             SizedBox(
-              height: 9.h,
+              height: 6.h,
             ),
             passwordTextField(),
             SizedBox(
@@ -125,12 +125,16 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
             SizedBox(
               height: 105.h,
             ),
-            Text(
-              'Forgot Password?',
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14.sp,
-                  color: kForgetTextColor),
+            Container(
+              width: 113.w,
+              height: 116.h,
+              child: Text(
+                'Forgot Password?',
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14.sp,
+                    color: kForgetTextColor),
+              ),
             ),
             SizedBox(
               height: 46.h,
@@ -168,7 +172,8 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
             borderSide:
                 const BorderSide(color: kTextFieldInsideColor, width: 0),
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 16.h),
+          contentPadding:
+              EdgeInsets.symmetric(vertical: 16.h, horizontal: 10.w),
           filled: true,
           hintText: '************',
           helperStyle: TextStyle(

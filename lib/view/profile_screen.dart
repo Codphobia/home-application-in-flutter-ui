@@ -18,8 +18,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: 80.h,
+            ),
             Padding(
-              padding: EdgeInsets.only(top: 80.h, left: 142.w, right: 143.w),
+              padding: EdgeInsets.symmetric(
+                horizontal: 142.w,
+              ),
               child: Text(
                 'PROFILE',
                 style: TextStyle(
@@ -33,10 +38,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             Column(
               children: [
-                CircleAvatar(
-                  radius: 60,
-                  backgroundImage: NetworkImage(
-                      'https://avatars.githubusercontent.com/u/83277996?s=400&u=0828b742cb111f8be1236a227fabdc1def3abd35&v=4'),
+                Container(
+                  width: 126.w,
+                  height: 126.h,
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        'https://avatars.githubusercontent.com/u/83277996?s=400&u=0828b742cb111f8be1236a227fabdc1def3abd35&v=4'),
+                  ),
                 ),
                 SizedBox(
                   height: 10.h,
@@ -55,64 +63,54 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 45.w),
-              child: Container(
-                width: 325.w,
-                height: 169.h,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'aqibjaved000@gmail.com',
-                            style: TextStyle(
-                                color: kProfilehintsTextColor,
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w400),
-                          )
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    SizedBox(
-                      height: 29.h,
-                    ),
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Connected Device Name',
-                            style: TextStyle(
-                                color: kProfilehintsTextColor,
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w400),
-                          )
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    SizedBox(
-                      height: 29.h,
-                    ),
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Device ID',
-                            style: TextStyle(
-                                color: kProfilehintsTextColor,
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w400),
-                          )
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'aqibjaved000@gmail.com',
+                        style: TextStyle(
+                            color: kProfilehintsTextColor,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w400),
+                      )
+                    ],
+                  ),
+                  Divider(),
+                  SizedBox(
+                    height: 29.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Connected Device Name',
+                        style: TextStyle(
+                            color: kProfilehintsTextColor,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w400),
+                      )
+                    ],
+                  ),
+                  Divider(),
+                  SizedBox(
+                    height: 29.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Device ID',
+                        style: TextStyle(
+                            color: kProfilehintsTextColor,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w400),
+                      )
+                    ],
+                  ),
+                  Divider(),
+                ],
               ),
             ),
             SizedBox(
