@@ -19,75 +19,73 @@ class _LoginScreenState extends State<LoginScreen> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: kBackgroundColor,
-        body: Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.h),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 48.w),
-                  child: Placeholder(),
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 48.w),
+                child: SvgPicture.asset(
+                  klogoUnionloginUpSvg,
+                  width: 317.24.w,
+                  height: 230.39.h,
                 ),
-                SizedBox(
-                  height: 37.h,
+              ),
+              SizedBox(
+                height: 30.h,
+              ),
+              Container(
+                width: 327.36.w,
+                height: 230.h,
+                color: Colors.transparent,
+                child: Image.asset('assets/Logo.png'),
+              ),
+              SizedBox(
+                height: 30.h,
+              ),
+              Text(
+                'Welcome!',
+                style: TextStyle(fontSize: 48.sp, fontWeight: FontWeight.w400),
+              ),
+              SizedBox(
+                height: 9.h,
+              ),
+              Text(
+                'Sign in to your Account',
+                style: TextStyle(
+                    color: kLogoSubTextColor,
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.w400),
+              ),
+              SizedBox(
+                height: 36.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.to(() => DeviceStepScreen());
+                },
+                child: SvgPicture.asset(
+                  kgooglebuttonloginSvg,
+                  width: 356.w,
+                  height: 63.h,
                 ),
-                CircleAvatar(
-                  child: Placeholder(),
+              ),
+              InkWell(
+                onTap: () {
+                  Get.to(() => DeviceStepScreen());
+                },
+                child: SvgPicture.asset(
+                  kgooglebuttonloginSvg,
+                  width: 356.w,
+                  height: 63.h,
                 ),
-                SizedBox(
-                  height: 37.h,
-                ),
-                Text(
-                  'Welcome!',
-                  style:
-                      TextStyle(fontSize: 48.sp, fontWeight: FontWeight.w400),
-                ),
-                SizedBox(
-                  height: 9.h,
-                ),
-                Text(
-                  'Sign in to your Account',
-                  style: TextStyle(
-                      color: kLogoSubTextColor,
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w400),
-                ),
-                SizedBox(
-                  height: 36.h,
-                ),
-                // SvgPicture.asset(
-                //   kGoogleButtonSvg,
-                //   width: 356.w,
-                //   height: 63.h,
-                // ),
-                InkWell(
-                  onTap: () {
-                    Get.to(() => DeviceStepScreen());
-                  },
-                  child: Container(
-                      color: Colors.grey,
-                      width: 356.w,
-                      height: 63.h,
-                      child: Center(child: const Text('google button 1'))),
-                ),
-                SizedBox(
-                  height: 1.h,
-                ),
-                Container(
-                    color: Colors.grey,
-                    width: 356.w,
-                    height: 63.h,
-                    child: Center(child: const Text('google button 2'))),
-                SizedBox(
-                  height: 37.h,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 48.w),
-                  child: Placeholder(),
-                ),
-              ],
-            ),
+              ),
+              SvgPicture.asset(
+                klogoUnionDownSvg,
+                width: 317.24.w,
+                height: 230.39.h,
+              ),
+            ],
           ),
         ),
       ),

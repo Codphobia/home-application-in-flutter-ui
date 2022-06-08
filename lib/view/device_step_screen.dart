@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:home_application_project/data/imagepath.dart';
 import 'package:home_application_project/utils/const.dart';
 import 'package:home_application_project/view/Home_Screen.dart';
 import 'package:home_application_project/view/navigationbar_screen.dart';
@@ -55,7 +57,14 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 48.w),
-              child: const Placeholder(),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 48.w),
+                child: SvgPicture.asset(
+                  klogoUnionloginUpSvg,
+                  width: 317.24.w,
+                  height: 230.39.h,
+                ),
+              ),
             ),
             SizedBox(
               height: 9.h,
@@ -106,17 +115,10 @@ class _DeviceStepScreenState extends State<DeviceStepScreen> {
                 padding: EdgeInsets.symmetric(
                   horizontal: 140.w,
                 ),
-                child: Container(
-                  color: kConnetButtonColor,
-                  child: Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 27.w, vertical: 12.h),
-                    child: Text(
-                      'Connect',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 18.sp),
-                    ),
-                  ),
+                child: Image.asset(
+                  'assets/connetpng.png',
+                  width: 134.w,
+                  height: 51.h,
                 ),
               ),
             ),

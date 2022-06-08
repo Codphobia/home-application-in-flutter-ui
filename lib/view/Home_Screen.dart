@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:home_application_project/data/custom_container.dart';
 import 'package:home_application_project/data/cutom_widgets.dart';
+import 'package:home_application_project/data/imagepath.dart';
 import 'package:home_application_project/utils/const.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,7 +27,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 children: [
                   CircleAvatar(
-                    child: Placeholder(),
+                    radius: 18,
+                    backgroundImage: NetworkImage(
+                        'https://avatars.githubusercontent.com/u/83277996?s=400&u=0828b742cb111f8be1236a227fabdc1def3abd35&v=4'),
                   ),
                   SizedBox(
                     width: 14.w,
@@ -43,19 +47,23 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 171.w),
-              child: CircleAvatar(
-                child: Placeholder(),
+              child: SvgPicture.asset(
+                kVideoIcon,
+                width: 60.w,
+                height: 60.h,
               ),
             ),
             SizedBox(
               height: 21.h,
             ),
-            CustomContainer(),
+            CustomContainer(
+                iconDataForContainerOne: kTeampIcon,
+                iconDataForContainerTwo: khumdifyIcon),
             SizedBox(
               height: 37.h,
             ),
             Padding(
-              padding: EdgeInsets.only(right: 142.w),
+              padding: EdgeInsets.only(right: 100.w),
               child: Text(
                 'Connected Appliances',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24.sp),
@@ -70,7 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 isSwitchedOne: false,
                 isSwitchedTwo: false,
                 checkForOne: false,
-                checkForTwo: false),
+                checkForTwo: false,
+                iconDataOne: kHeaterIcon,
+                iconDataTwo: kHumidifierIcon),
             SizedBox(
               height: 25.h,
             ),
@@ -80,7 +90,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 isSwitchedOne: false,
                 isSwitchedTwo: false,
                 checkForOne: false,
-                checkForTwo: false),
+                checkForTwo: false,
+                iconDataOne: kFanIcon,
+                iconDataTwo: kWaterpPumpIcon),
             SizedBox(
               height: 25.h,
             ),
@@ -90,7 +102,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 isSwitchedOne: false,
                 isSwitchedTwo: false,
                 checkForOne: false,
-                checkForTwo: false),
+                checkForTwo: false,
+                iconDataOne: kLightIcon,
+                iconDataTwo: kIntakeIcon),
             SizedBox(
               height: 25.h,
             ),
@@ -100,7 +114,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 isSwitchedOne: false,
                 isSwitchedTwo: false,
                 checkForOne: false,
-                checkForTwo: false),
+                checkForTwo: false,
+                iconDataOne: kExhausIcon,
+                iconDataTwo: kMotorIcon),
             SizedBox(
               height: 20.h,
             ),

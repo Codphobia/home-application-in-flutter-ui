@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:home_application_project/utils/const.dart';
 
 // ignore: must_be_immutable
 class MyWidget extends StatefulWidget {
-  String titleForRowOne, titleForRowTwo;
+  String titleForRowOne, titleForRowTwo, iconDataOne, iconDataTwo;
   bool isSwitchedOne, isSwitchedTwo;
   bool checkForOne, checkForTwo;
   MyWidget(
@@ -14,7 +15,9 @@ class MyWidget extends StatefulWidget {
       required this.isSwitchedOne,
       required this.isSwitchedTwo,
       required this.checkForOne,
-      required this.checkForTwo})
+      required this.checkForTwo,
+      required this.iconDataOne,
+      required this.iconDataTwo})
       : super(key: key);
 
   @override
@@ -40,8 +43,13 @@ class _MyWidgetState extends State<MyWidget> {
               height: 130.sp,
               child: Column(
                 children: [
-                  CircleAvatar(
-                    child: Placeholder(),
+                  SizedBox(
+                    height: 9.h,
+                  ),
+                  SvgPicture.asset(
+                    widget.iconDataOne,
+                    width: 20.w,
+                    height: 25.h,
                   ),
                   SizedBox(
                     height: 9.h,
@@ -112,8 +120,13 @@ class _MyWidgetState extends State<MyWidget> {
               height: 130.sp,
               child: Column(
                 children: [
-                  CircleAvatar(
-                    child: Placeholder(),
+                  SizedBox(
+                    height: 9.h,
+                  ),
+                  SvgPicture.asset(
+                    widget.iconDataTwo,
+                    width: 20.w,
+                    height: 25.h,
                   ),
                   SizedBox(
                     height: 9.h,

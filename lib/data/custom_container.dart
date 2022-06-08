@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_application_project/utils/const.dart';
 
 class CustomContainer extends StatelessWidget {
-  const CustomContainer({
-    Key? key,
-  }) : super(key: key);
+  String iconDataForContainerOne, iconDataForContainerTwo;
+  CustomContainer(
+      {Key? key,
+      required this.iconDataForContainerOne,
+      required this.iconDataForContainerTwo})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +29,13 @@ class CustomContainer extends StatelessWidget {
               height: 130.sp,
               child: Column(
                 children: [
-                  CircleAvatar(
-                    child: Placeholder(),
+                  SizedBox(
+                    height: 9.h,
+                  ),
+                  SvgPicture.asset(
+                    iconDataForContainerOne,
+                    width: 20.w,
+                    height: 25.h,
                   ),
                   SizedBox(
                     height: 9.h,
@@ -87,8 +96,13 @@ class CustomContainer extends StatelessWidget {
               height: 130.sp,
               child: Column(
                 children: [
-                  CircleAvatar(
-                    child: Placeholder(),
+                  SizedBox(
+                    height: 9.h,
+                  ),
+                  SvgPicture.asset(
+                    iconDataForContainerTwo,
+                    width: 20.w,
+                    height: 25.h,
                   ),
                   SizedBox(
                     height: 9.h,

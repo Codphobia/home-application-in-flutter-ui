@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 3), () {
       Get.to(() => const LoginScreen());
     });
   }
@@ -35,17 +35,28 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 29.w),
             child: Column(children: [
-              Align(alignment: Alignment.center, child: const Placeholder()),
-              SizedBox(
-                height: 65.h,
-              ),
-              CircleAvatar(
-                child: Placeholder(),
+              SvgPicture.asset(
+                klogoUnionUpSvg,
+                width: 356.47.w,
+                height: 267.62.h,
               ),
               SizedBox(
                 height: 65.h,
               ),
-              Align(alignment: Alignment.center, child: const Placeholder()),
+              Container(
+                width: 327.36.w,
+                height: 230.h,
+                color: Colors.transparent,
+                child: Image.asset('assets/Logo.png'),
+              ),
+              SizedBox(
+                height: 65.h,
+              ),
+              SvgPicture.asset(
+                klogoUnionDownSvg,
+                width: 356.47.w,
+                height: 267.62.h,
+              ),
             ]),
           ),
         ),
